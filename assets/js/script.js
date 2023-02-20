@@ -50,3 +50,22 @@ let questions= [
     rightAnswer: `a`
     } 
 ]
+
+function createQuiz(qs, quizDiv, resultsDiv, submitBtn){
+
+	function displayQuestions(qs, quizDiv){
+		
+	}
+
+	function displayResults(qs, quizDiv, resultsDiv){
+		
+	}
+
+	// display the qs
+	displayQuestions(qs, quizDiv);
+
+	// when user clicks submit, show results
+	submitBtn.onclick = function(){
+		displayResults(qs, quizDiv, resultsDiv);
+	}
+}
