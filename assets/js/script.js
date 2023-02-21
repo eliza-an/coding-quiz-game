@@ -1,3 +1,7 @@
+let options= document.getElementById('options')
+let qs= document.getElementById('question')
+let btn= document.getElementById('btn')
+
 let questions= [
  { q: "Which symbol is commonly associated with JQueery?",
     answer: {
@@ -51,19 +55,35 @@ let questions= [
     } ,
 ]
 
-console.log(questions.length)
+
+
+btn.addEventListener("click", displayQuestions);
 
 
 
- $(function displayQuestions(qs, quizDiv){
- for(let i=0; i<questions.length; i++ ){
 
-    questions.answer.forEach(function(){
-    quesitonsDiv= $("<button>")
-    $("button").append(questions.answer[i])
+let i=0
+function displayQuestions() {
 
-   })
- }
-    })
+    
+        let opt= questions[i].answer
+        let  quest= questions[i].q
+        let qtitle = document.createElement('p')
+        let qopt= document.createElement('p')
+        qtitle.textContent=quest 
+        qopt.textContent= Object.values(opt)
+        qs.append(qtitle)
+        options.append(qopt)
+    
+    function addI (){
+    i=i+1
+    
+    }
+    addI()
+}; 
+   
+displayQuestions()
+  
 
-displayQuestions(qs, quizDiv);
+
+
