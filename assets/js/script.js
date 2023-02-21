@@ -59,7 +59,10 @@ let questions= [
 
 btn.addEventListener("click", displayQuestions);
 
-let i=0 
+
+
+
+let i=0
 function displayQuestions() {
 
     
@@ -71,10 +74,16 @@ function displayQuestions() {
         qopt.textContent= Object.values(opt)
         qs.append(qtitle)
         options.append(qopt)
-    i++
+    
+    function addI (){
+    i=i+1
+    
+    }
+    addI()
 }; 
    
-
+displayQuestions()
   
+
 
 
