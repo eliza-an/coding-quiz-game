@@ -54,16 +54,22 @@ let questions= [
     } ,
 ]
 
-console.log(questions.length)
+
 
 
  function displayQuestions(){
     for(let i=0; i<questions.length; i++ ){
 
+        opt= questions[i].answer
         quest= questions[i].q
         let qtitle = document.createElement('p')
-        qtitle.textContent=quest
+        let qopt= document.createElement('p')
+        qtitle.textContent=quest 
+        qopt.textContent= Object.values(opt)
         qs.append(qtitle)
+        options.append(qopt)
+         
+
  
  }
 
