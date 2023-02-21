@@ -51,19 +51,20 @@ let questions= [
     } ,
 ]
 
-console.log(questions.length)
+console.log(questions[1].answer)
 
 
 
- $(function displayQuestions(qs, quizDiv){
- for(let i=0; i<questions.length; i++ ){
+ function displayQuestions(){
+    for(let i=0; i<questions.length; i++ ){
 
-    questions.answer.forEach(function(){
-    quesitonsDiv= $("<button>")
-    $("button").append(questions.answer[i])
+        for(let i=0; i<questions[i].answer.length; i++ ){
 
-   })
- }
-    })
+        quesitonsDiv= $("<button>")
+        $("button").append(questions[i].answer[i])
 
-displayQuestions(qs, quizDiv);
+        }
+    }
+}
+
+displayQuestions();
