@@ -1,5 +1,6 @@
 let options= document.getElementById('options')
 let qs= document.getElementById('question')
+let btn= document.getElementById('btn')
 
 let questions= [
  { q: "Which symbol is commonly associated with JQueery?",
@@ -56,25 +57,24 @@ let questions= [
 
 
 
+btn.addEventListener("click", displayQuestions);
 
- function displayQuestions(){
-    for(let i=0; i<questions.length; i++ ){
+let i=0 
+function displayQuestions() {
 
-        opt= questions[i].answer
-        quest= questions[i].q
+    
+        let opt= questions[i].answer
+        let  quest= questions[i].q
         let qtitle = document.createElement('p')
         let qopt= document.createElement('p')
         qtitle.textContent=quest 
         qopt.textContent= Object.values(opt)
         qs.append(qtitle)
         options.append(qopt)
-         
-
- 
- }
-
+    i++
+}; 
    
-}
 
-displayQuestions();
+  
+
 
