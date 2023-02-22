@@ -1,6 +1,6 @@
 let options= document.getElementById('options')
 let qs= document.getElementById('question')
-let btn= document.getElementById('btn')
+
 
 let questions= [
  { q: "Which symbol is commonly associated with JQueery?",
@@ -55,31 +55,51 @@ let questions= [
     } ,
 ]
 
-
-
-btn.addEventListener("click", displayQuestions);
-
-
-
+//btn.addEventListener("click", displayQuestions);
+//btn.addEventListener("click", 
 
 let i=0
+
+
+var qtitle = document.createElement('p')
+
+var qopt1= document.createElement('button')
+var qopt2= document.createElement('button')
+var qopt3 =document.createElement('button')
+var qopt4 =document.createElement('button')
+
+qopt1.addEventListener("click", displayQuestions)
+qopt2.addEventListener("click", displayQuestions)
+qopt3.addEventListener("click", displayQuestions)
+qopt4.addEventListener("click", displayQuestions)
+
+
+ //for (i=0; i<questions[i].answer.length; i++){
+//
+
+
+
 function displayQuestions() {
 
-    
+
+
         let opt= questions[i].answer
-        let  quest= questions[i].q
-        let qtitle = document.createElement('p')
-        let qopt= document.createElement('p')
+    
+        let quest= questions[i].q
         qtitle.textContent=quest 
-        qopt.textContent= Object.values(opt)
+        qopt1.textContent= opt.a
+        qopt2.textContent= opt.b
+        qopt3.textContent= opt.c
+        qopt4.textContent= opt.d
         qs.append(qtitle)
-        options.append(qopt)
-    
-    function addI (){
-    i=i+1
-    
-    }
-    addI()
+        options.append(qopt1)
+        options.append(qopt2)
+        options.append(qopt3)
+        options.append(qopt4)
+        i=i+1   
+
+
+
 }; 
    
 displayQuestions()
