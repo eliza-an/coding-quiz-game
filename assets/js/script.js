@@ -62,7 +62,8 @@ btn.addEventListener("click", displayQuestions)
 
 
 
-
+ var qtitle = document.createElement('p')
+ var qopt= document.createElement('p')
 
 let i=0
 function displayQuestions() {
@@ -72,13 +73,11 @@ function displayQuestions() {
   
         let opt= questions[i].answer
         let  quest= questions[i].q
-        let qtitle = document.createElement('p')
-        let qopt= document.createElement('p')
         qtitle.textContent=quest 
         qopt.textContent= Object.values(opt)
         qs.append(qtitle)
         options.append(qopt)
-     let inew= i=i+1   
+        i=i+1   
 
 }; 
    
