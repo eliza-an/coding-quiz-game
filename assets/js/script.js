@@ -74,6 +74,8 @@ qopt3.addEventListener("click", displayQuestions)
 qopt4.addEventListener("click", displayQuestions)
 
 
+
+
  //for (i=0; i<questions[i].answer.length; i++){
 //
 
@@ -104,6 +106,8 @@ function displayQuestions() {
    
 displayQuestions()
   
+
+
 
 
 
