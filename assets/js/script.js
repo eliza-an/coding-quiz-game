@@ -53,12 +53,22 @@ let questions= [
 
     rightAnswer: `a`
     } ,
+    { q: "blank",
+    answer: {
+        a: `blank`,
+        b: `blank`,
+        c: `blank`,
+        d: `blank`,
+    }, 
+
+    rightAnswer: `a`
+    } ,
 ]
 
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
-let i=0
+var i=0
 
 
 var qtitle = document.createElement('p')
@@ -73,18 +83,29 @@ qopt2.addEventListener("click", displayQuestions)
 qopt3.addEventListener("click", displayQuestions)
 qopt4.addEventListener("click", displayQuestions)
 
+qopt1.classList.add("Hello")
+qopt2.classList.add("Hello")
+qopt3.classList.add("Hello")
+qopt4.classList.add("Hello")
 
- //for (i=0; i<questions[i].answer.length; i++){
-//
+function myFunction{
+qopt1.setAttribute("href", "./results.html")
+qopt2.setAttribute("href", "./results.html")
+qopt3.setAttribute("href", "./results.html")
+qopt4.setAttribute("href", "./results.html")
+}
+
+function linkemelemt() {
+    window.location.href = "http://www.w3schools.com";
+}
 
 
 
 function displayQuestions() {
 
+if(i<6){
 
-
-        let opt= questions[i].answer
-    
+        var opt= questions[i].answer
         let quest= questions[i].q
         qtitle.textContent=quest 
         qopt1.textContent= opt.a
@@ -98,9 +119,11 @@ function displayQuestions() {
         options.append(qopt4)
         i=i+1   
 
+} else if (i>6){
 
-
-}; 
+}
+}
+ 
    
 displayQuestions()
   
