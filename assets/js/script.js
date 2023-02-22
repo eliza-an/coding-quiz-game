@@ -58,27 +58,46 @@ let questions= [
 //btn.addEventListener("click", displayQuestions);
 btn.addEventListener("click", displayQuestions)
 
-
-
-
-
- var qtitle = document.createElement('p')
- var qopt= document.createElement('p')
-
 let i=0
+
+
+var qtitle = document.createElement('p')
+
+var qopt1= document.createElement('button')
+var qopt2=document.createElement('button')
+var qopt3 =document.createElement('button')
+var qopt4 =document.createElement('button')
+
+ //for (i=0; i<questions[i].answer.length; i++){
+//
+
+
+
 function displayQuestions() {
 
 
 
-  
         let opt= questions[i].answer
-        let  quest= questions[i].q
+    
+        let quest= questions[i].q
         qtitle.textContent=quest 
-        qopt.textContent= Object.values(opt)
+        qopt1.textContent= opt.a
+        qopt2.textContent= opt.b
+        qopt3.textContent= opt.c
+        qopt4.textContent= opt.d
         qs.append(qtitle)
-        options.append(qopt)
+        options.append(qopt1)
+        options.append(qopt2)
+        options.append(qopt3)
+        options.append(qopt4)
         i=i+1   
 
+
+console.log(Object.values(opt.a))
+
+
+
+//
 }; 
    
 displayQuestions()
