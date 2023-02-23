@@ -124,31 +124,29 @@ if(i<6){
 displayQuestions()
 
 
-var countDownDate = new Date("Jul 25, 2025 16:37:52").getTime();
-
-//the set interval functiopn makes sure the page gets updated every second
-var y = setInterval(function() {
-
-    // current date/time
-    var current = new Date().getTime();
-  
-    // The difference between the two
-    var difference = countDownDate - current;
-  
-    // counting the time for seconds and minutes
-    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
-  
-    // making sure to show the countdown on the html page
-    document.getElementById("countdown").innerHTML =
-    + minutes + "min " + seconds + "s ";
-  
-    // If the count down is finished, write some text
-    if (difference < 0) {
-      clearInterval(y);
-      document.getElementById("demo").innerHTML = "EXPIRED";
+function counting() {
+    var sec = 61;
+    function count() {
+      var counter = document.getElementById("countdown");
+      sec--;
+      counter.innerHTML =
+        "0:" + (sec < 10 ? "0" : "") + String(sec);
+      if (sec > 0) {
+        setTimeout(count, 1000);
+      } else {
+        document.getElementById("verifiBtn").innerHTML = `
+            <div class="Btn" id="ResendBtn">
+                <button type="submit">Resend</button>
+            </div>
+        `;
+        document.getElementById("counter").innerHTML = "";
+      }
     }
-  }, 1000);
+    count();
+  }
+  counting();
+
+
   
 
   
