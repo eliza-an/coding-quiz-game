@@ -15,16 +15,16 @@ a:hover {
 
 button {
   display: inline-block;
-  margin: 5px;
+  margin: 5px !important;
   cursor: pointer;
   font-size: 100%;
   background-color: #563d7c;
-  border-radius: 5px;
-  padding: 30px;
+  border-radius: 5px !important;
+  padding: 30px !important ;
   color: white;
-  border: 0;
+  border: 0 !important;
   transition: background-color 0.1s;
-  max-width: 200px;
+  max-width: 200px !important;
   
 }
 

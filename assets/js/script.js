@@ -88,16 +88,10 @@ qopt2.classList.add("Hello")
 qopt3.classList.add("Hello")
 qopt4.classList.add("Hello")
 
-function myFunction{
-qopt1.setAttribute("href", "./results.html")
-qopt2.setAttribute("href", "./results.html")
-qopt3.setAttribute("href", "./results.html")
-qopt4.setAttribute("href", "./results.html")
-}
-
-function linkemelemt() {
-    window.location.href = "http://www.w3schools.com";
-}
+qopt1.addEventListener("click",setLocalStorage1)
+qopt2.addEventListener("click", displayQuestions)
+qopt3.addEventListener("click", displayQuestions)
+qopt4.addEventListener("click", displayQuestions)
 
 
 
@@ -119,13 +113,53 @@ if(i<6){
         options.append(qopt4)
         i=i+1   
 
-} else if (i>6){
-
+} else{
+    myFunction()
 }
 }
  
    
 displayQuestions()
+
+let one= 0
+let two=0
+let three=0
+let four=0
+
+window.localStorage.setItem("Question 1 answer: ", one)
+window.localStorage.setItem("Question 2 answer: ", two)
+window.localStorage.setItem("Question 3 answer: ", three)
+window.localStorage.setItem("Question 4 answer: ", four)
+
+
+ function setLocalStorage1(){
+one=one +1
+}
+
+function counting() {
+    var sec = 31;
+    function count() {
+      var counter = document.getElementById("countdown");
+      sec--;
+      counter.innerHTML =
+        "0:" + (sec < 10 ? "0" : "") + String(sec);
+      if (sec > 0) {
+        setTimeout(count, 1000);
+      } else if (sec<1) {
+       alert("You're out of time!");
+       $('#myModal').modal(options)
+      
+      } else if (questions.answer!==questions.rightAnswer) {
+        console.log(`hello`)
+      }
+    }
+    count();
+  }
+  counting();
+
+
+  
+
   
 
 
