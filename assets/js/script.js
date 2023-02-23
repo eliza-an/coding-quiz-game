@@ -88,16 +88,12 @@ qopt2.classList.add("Hello")
 qopt3.classList.add("Hello")
 qopt4.classList.add("Hello")
 
-function myFunction{
-qopt1.setAttribute("href", "./results.html")
-qopt2.setAttribute("href", "./results.html")
-qopt3.setAttribute("href", "./results.html")
-qopt4.setAttribute("href", "./results.html")
-}
+function myFunction(){
+qopt1.setAttribute("href", "results.html")
+qopt2.setAttribute("href", "results.html")
+qopt3.setAttribute("href", "results.html")
+qopt4.setAttribute("href", "results.html")}
 
-function linkemelemt() {
-    window.location.href = "http://www.w3schools.com";
-}
 
 
 
@@ -119,13 +115,42 @@ if(i<6){
         options.append(qopt4)
         i=i+1   
 
-} else if (i>6){
-
+} else{
+    myFunction()
 }
 }
  
    
 displayQuestions()
+
+
+var countDownDate = new Date("Jul 25, 2025 16:37:52").getTime();
+
+//the set interval functiopn makes sure the page gets updated every second
+var y = setInterval(function() {
+
+    // current date/time
+    var current = new Date().getTime();
+  
+    // The difference between the two
+    var difference = countDownDate - current;
+  
+    // counting the time for seconds and minutes
+    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  
+    // making sure to show the countdown on the html page
+    document.getElementById("countdown").innerHTML =
+    + minutes + "min " + seconds + "s ";
+  
+    // If the count down is finished, write some text
+    if (difference < 0) {
+      clearInterval(y);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  
+
   
 
 
