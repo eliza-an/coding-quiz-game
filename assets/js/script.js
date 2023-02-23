@@ -125,7 +125,7 @@ displayQuestions()
 
 
 function counting() {
-    var sec = 2;
+    var sec = 31;
     function count() {
       var counter = document.getElementById("countdown");
       sec--;
@@ -135,7 +135,7 @@ function counting() {
         setTimeout(count, 1000);
       } else if (sec<1) {
        alert("You're out of time!");
-       window.location='./results.html'
+       $('#myModal').modal(options)
       
       } else {
         console.log(`hello`)
