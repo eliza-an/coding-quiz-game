@@ -88,12 +88,10 @@ qopt2.classList.add("Hello")
 qopt3.classList.add("Hello")
 qopt4.classList.add("Hello")
 
-function myFunction(){
-qopt1.setAttribute("href", "results.html")
-qopt2.setAttribute("href", "results.html")
-qopt3.setAttribute("href", "results.html")
-qopt4.setAttribute("href", "results.html")}
-
+qopt1.addEventListener("click",setLocalStorage1)
+qopt2.addEventListener("click", displayQuestions)
+qopt3.addEventListener("click", displayQuestions)
+qopt4.addEventListener("click", displayQuestions)
 
 
 
@@ -123,6 +121,20 @@ if(i<6){
    
 displayQuestions()
 
+let one= 0
+let two=0
+let three=0
+let four=0
+
+window.localStorage.setItem("Question 1 answer: ", one)
+window.localStorage.setItem("Question 2 answer: ", two)
+window.localStorage.setItem("Question 3 answer: ", three)
+window.localStorage.setItem("Question 4 answer: ", four)
+
+
+ function setLocalStorage1(){
+one=one +1
+}
 
 function counting() {
     var sec = 31;
@@ -137,7 +149,7 @@ function counting() {
        alert("You're out of time!");
        $('#myModal').modal(options)
       
-      } else {
+      } else if (questions.answer!==questions.rightAnswer) {
         console.log(`hello`)
       }
     }
