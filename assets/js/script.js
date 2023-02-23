@@ -125,7 +125,7 @@ displayQuestions()
 
 
 function counting() {
-    var sec = 61;
+    var sec = 2;
     function count() {
       var counter = document.getElementById("countdown");
       sec--;
@@ -133,13 +133,12 @@ function counting() {
         "0:" + (sec < 10 ? "0" : "") + String(sec);
       if (sec > 0) {
         setTimeout(count, 1000);
+      } else if (sec<1) {
+       alert("You're out of time!");
+       window.location='./results.html'
+      
       } else {
-        document.getElementById("verifiBtn").innerHTML = `
-            <div class="Btn" id="ResendBtn">
-                <button type="submit">Resend</button>
-            </div>
-        `;
-        document.getElementById("counter").innerHTML = "";
+        console.log(`hello`)
       }
     }
     count();
