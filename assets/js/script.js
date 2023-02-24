@@ -83,10 +83,10 @@ qopt2.addEventListener("click", displayQuestions)
 qopt3.addEventListener("click", displayQuestions)
 qopt4.addEventListener("click", displayQuestions)
 
-qopt1.classList.add("Hello")
-qopt2.classList.add("Hello")
-qopt3.classList.add("Hello")
-qopt4.classList.add("Hello")
+qopt1.classList.add("a")
+qopt2.classList.add("b")
+qopt3.classList.add("c")
+qopt4.classList.add("d")
 
 qopt1.addEventListener("click",setLocalStorage1)
 qopt2.addEventListener("click",setLocalStorage2)
@@ -110,9 +110,7 @@ if(i<6){
         options.append(qopt3)
         options.append(qopt4)
         i=i+1   
-
-} else{
-    myFunction()
+ console.log(i)
 }
 }
  
@@ -124,11 +122,8 @@ let two=0
 let three=0
 let four=0
 
-window.localStorage.setItem("Question 1 answer: ", one)
-window.localStorage.setItem("Question 2 answer: ", two)
-window.localStorage.setItem("Question 3 answer: ", three)
-window.localStorage.setItem("Question 4 answer: ", four)
 
+console.log(questions[1].answer.)
 
 function setLocalStorage1(){
   window.localStorage.setItem("Question 1 answer: ", one+=1)
@@ -155,12 +150,14 @@ function counting() {
         "0:" + (sec < 10 ? "0" : "") + String(sec);
       if (sec > 0) {
         setTimeout(count, 1000);
+        if (questions[i].answer===questions.rightAnswer){
+          sec-5
+        }
+
       } else if (sec<1) {
        alert("You're out of time!");
        $('#myModal').modal(options)
       
-      } else if (questions.answer!==questions.rightAnswer) {
-        console.log(`hello`)
       }
     }
     count();
