@@ -89,11 +89,9 @@ qopt3.classList.add("Hello")
 qopt4.classList.add("Hello")
 
 qopt1.addEventListener("click",setLocalStorage1)
-qopt2.addEventListener("click", displayQuestions)
-qopt3.addEventListener("click", displayQuestions)
-qopt4.addEventListener("click", displayQuestions)
-
-
+qopt2.addEventListener("click",setLocalStorage2)
+qopt3.addEventListener("click", setLocalStorage3)
+qopt4.addEventListener("click", setLocalStorage4)
 
 function displayQuestions() {
 
@@ -132,8 +130,20 @@ window.localStorage.setItem("Question 3 answer: ", three)
 window.localStorage.setItem("Question 4 answer: ", four)
 
 
- function setLocalStorage1(){
-one=one +1
+function setLocalStorage1(){
+  window.localStorage.setItem("Question 1 answer: ", one+=1)
+}
+
+function setLocalStorage2(){
+  window.localStorage.setItem("Question 2 answer: ", two+=1)
+}
+
+function setLocalStorage3(){
+  window.localStorage.setItem("Question 3 answer: ", three+=1)
+}
+
+function setLocalStorage4(){
+  window.localStorage.setItem("Question 4 answer: ", four+=1)
 }
 
 function counting() {
