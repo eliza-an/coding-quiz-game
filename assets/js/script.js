@@ -123,22 +123,22 @@ let three=0
 let four=0
 
 
-console.log(questions[1].answer.)
+
 
 function setLocalStorage1(){
-  window.localStorage.setItem("Question 1 answer: ", one+=1)
+  window.localStorage.setItem("b", "a")
 }
 
 function setLocalStorage2(){
-  window.localStorage.setItem("Question 2 answer: ", two+=1)
+  window.localStorage.setItem("b", "b")
 }
 
 function setLocalStorage3(){
-  window.localStorage.setItem("Question 3 answer: ", three+=1)
+  window.localStorage.setItem("b", "c")
 }
 
 function setLocalStorage4(){
-  window.localStorage.setItem("Question 4 answer: ", four+=1)
+  window.localStorage.setItem("b", "d")
 }
 
 function counting() {
@@ -150,8 +150,10 @@ function counting() {
         "0:" + (sec < 10 ? "0" : "") + String(sec);
       if (sec > 0) {
         setTimeout(count, 1000);
-        if (questions[i].answer===questions.rightAnswer){
-          sec-5
+        if ( window.localStorage.getItem("b")!==questions[i].rightAnswer){
+          sec=sec-5
+        }else{
+          sec=sec
         }
 
       } else if (sec<1) {
