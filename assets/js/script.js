@@ -110,7 +110,7 @@ if(i<6){
         options.append(qopt3)
         options.append(qopt4)
         i=i+1   
- console.log(i)
+
 }
 }
  
@@ -144,18 +144,22 @@ function setLocalStorage4(){
 function counting() {
     var sec = 31;
     function count() {
+     
       var counter = document.getElementById("countdown");
       sec--;
       counter.innerHTML =
         "0:" + (sec < 10 ? "0" : "") + String(sec);
       if (sec > 0) {
         setTimeout(count, 1000);
-        if ( window.localStorage.getItem("b")!==questions[i].rightAnswer){
+        setInterval(function(){
+        
+        if (window.localStorage.getItem("b")!==null && window.localStorage.getItem("b")!==questions[i-1].rightAnswer){
+         
           sec=sec-5
-        }else{
-          sec=sec
+          
+          window.localStorage.clear()
         }
-
+          },100)
       } else if (sec<1) {
        alert("You're out of time!");
        $('#myModal').modal(options)
