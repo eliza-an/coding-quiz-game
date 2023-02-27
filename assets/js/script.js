@@ -110,7 +110,7 @@ if(i<6){
         options.append(qopt3)
         options.append(qopt4)
         i=i+1   
- console.log(i)
+
 }
 }
  
@@ -123,37 +123,43 @@ let three=0
 let four=0
 
 
-console.log(questions[1].answer.)
+
 
 function setLocalStorage1(){
-  window.localStorage.setItem("Question 1 answer: ", one+=1)
+  window.localStorage.setItem("b", "a")
 }
 
 function setLocalStorage2(){
-  window.localStorage.setItem("Question 2 answer: ", two+=1)
+  window.localStorage.setItem("b", "b")
 }
 
 function setLocalStorage3(){
-  window.localStorage.setItem("Question 3 answer: ", three+=1)
+  window.localStorage.setItem("b", "c")
 }
 
 function setLocalStorage4(){
-  window.localStorage.setItem("Question 4 answer: ", four+=1)
+  window.localStorage.setItem("b", "d")
 }
 
 function counting() {
     var sec = 31;
     function count() {
+     
       var counter = document.getElementById("countdown");
       sec--;
       counter.innerHTML =
         "0:" + (sec < 10 ? "0" : "") + String(sec);
       if (sec > 0) {
         setTimeout(count, 1000);
-        if (questions[i].answer===questions.rightAnswer){
-          sec-5
+        setInterval(function(){
+        
+        if (window.localStorage.getItem("b")!==null && window.localStorage.getItem("b")!==questions[i-1].rightAnswer){
+         
+          sec=sec-5
+          
+          window.localStorage.clear()
         }
-
+          },100)
       } else if (sec<1) {
        alert("You're out of time!");
        $('#myModal').modal(options)
