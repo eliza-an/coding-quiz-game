@@ -3,6 +3,26 @@ let qs= document.getElementById('question')
 
 
 let questions= [
+  { q: "blank",
+  answer: {
+      a: `blank`,
+      b: `blank`,
+      c: `blank`,
+      d: `blank`,
+  }, 
+
+  rightAnswer: `a`
+  } ,
+  { q: "blank",
+  answer: {
+      a: `blank`,
+      b: `blank`,
+      c: `blank`,
+      d: `blank`,
+  }, 
+
+  rightAnswer: `a`
+  } ,
  { q: "Which symbol is commonly associated with JQueery?",
     answer: {
         a: `&`,
@@ -68,7 +88,41 @@ let questions= [
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
-var i=0
+var i=2
+function counting() {
+    var sec = 31;
+    function count() {
+     
+      var counter = document.getElementById("countdown");
+      sec--;
+      counter.innerHTML =
+        "0:" + (sec < 10 ? "0" : "") + String(sec);
+      if (sec > 0) {
+        setTimeout(count, 1000);
+        setInterval(function(){
+        let clicked= localStorage.getItem("b")
+        console.log(questions[i-2].rightAnswer)
+        console.log(clicked)
+
+        if (clicked!==null && clicked!==questions[i-2].rightAnswer){
+         
+          sec=sec-5
+          
+          window.localStorage.clear()
+        }else if (clicked==questions[i-2].rightAnswer){
+          sec=sec
+        }
+          },100)
+          
+      } else if (sec<1) {
+       alert("You're out of time!");
+       $('#myModal').modal(options)
+      
+      }
+    }
+    count();
+  }
+  counting();
 
 
 var qtitle = document.createElement('p')
@@ -117,10 +171,6 @@ if(i<6){
    
 displayQuestions()
 
-let one= 0
-let two=0
-let three=0
-let four=0
 
 
 
@@ -141,34 +191,6 @@ function setLocalStorage4(){
   window.localStorage.setItem("b", "d")
 }
 
-function counting() {
-    var sec = 31;
-    function count() {
-     
-      var counter = document.getElementById("countdown");
-      sec--;
-      counter.innerHTML =
-        "0:" + (sec < 10 ? "0" : "") + String(sec);
-      if (sec > 0) {
-        setTimeout(count, 1000);
-        setInterval(function(){
-        
-        if (window.localStorage.getItem("b")!==null && window.localStorage.getItem("b")!==questions[i-1].rightAnswer){
-         
-          sec=sec-5
-          
-          window.localStorage.clear()
-        }
-          },100)
-      } else if (sec<1) {
-       alert("You're out of time!");
-       $('#myModal').modal(options)
-      
-      }
-    }
-    count();
-  }
-  counting();
 
 
   
