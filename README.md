@@ -1,88 +1,45 @@
-# Module 6 Challenge Web APIs: Code Quiz
 
-## Your Task
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  # Coding Quiz Game
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+  # Description
+  This was another challenge for trillogy skills bootcamp. The acceptance criteria were as follows:   GIVEN I am taking a code quiz. WHEN I click the start button. THEN a timer starts and I am presented with a question. WHEN I answer a question. THEN I am presented with another question. WHEN I answer a question incorrectly. THEN time is subtracted from the clock. WHEN all questions are answered or the timer reaches 0. THEN the game is over. WHEN the game is over. THEN I can save my initials and score. This was by far one of the most challenging challeneges of the bootcamp. The implementation of the local storage and the timer were extremely difficult to grasp, however after several failed attempts, this is what I managed to come up with. I am incredibly grateful for the opportunity to learn such complex but interesting concepts.
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
- 
 
-## User Story
+  ## Table of Contents
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+  * [Description](#Description)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Contributing](#Contributions)
+  * [Tests](#Tests)
+  * [License](#License)
+  * [Questions](#Questions)
 
-## Acceptance Criteria
+  ## Installation
 
-Create a code quiz that contains the following requirements:
+  N/A
 
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
 
-* The quiz should end when all questions are answered or the timer reaches 0.
+  ## Usage
 
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
+  Simply click the Start quiz button on the starting page. Next answer each question by clicking the button that you believe contains the right answer. If you are correct, you will be able to continue without time being decudcted. If you are wrong, 5 second will be deducted from the timer. The quiz will end if the timer runs out or you answer all of the questions!
+
+
+  ## Contributing
+  I would like to thank trillogy skills bootcamp for the starter code, and Joel Morley for his helpful discussions
+
+
+  ## Tests
+
+  N/A
+
+
+  ## License
+
+  The license for this project is MIT License
+
+  ## Questions
+  Please reach out if you would like clarification on this project via my Github: https://github.com/eliza-an
+  or my email 
   
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
