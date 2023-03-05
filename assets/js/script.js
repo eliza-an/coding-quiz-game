@@ -74,15 +74,25 @@ let questions= [
 
     rightAnswer: `a`
     } ,
-    { q: "blank",
+    { q: "What type of popup box is NOT available in Javascript?",
     answer: {
-        a: `blank`,
-        b: `blank`,
-        c: `blank`,
-        d: `blank`,
+        a: `Prompt`,
+        b: `Confirm`,
+        c: `Question`,
+        d: `Alert`,
     }, 
 
-    rightAnswer: `a`
+    rightAnswer: `c`
+    } ,
+    { q: "You Have FINISHED!!",
+    answer: {
+        a: `Thank`,
+        b: `You`,
+        c: `for`,
+        d: `Playing!`,
+    }, 
+
+    rightAnswer: `c`
     } ,
 ]
 
@@ -110,9 +120,9 @@ function counting() {
     
 console.log(i)
 
-      if(i>7){
-        alert("Finished!");
-       $('#myModal').modal(options)
+      if(i>8){
+        sec=0
+      
       }
         if (clicked!==null && clicked!==questions[i-2].rightAnswer){
          
@@ -162,7 +172,7 @@ qopt4.addEventListener("click", setLocalStorage4)
 
 function displayQuestions() {
 
-if(i<8){
+if(i<9){
 
         var opt= questions[i].answer
         let quest= questions[i].q
