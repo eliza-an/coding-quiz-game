@@ -87,6 +87,8 @@ let questions= [
 ]
 
 
+
+
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
@@ -105,9 +107,13 @@ function counting() {
         setTimeout(count, 1000);
         setInterval(function(){
         let clicked= localStorage.getItem("b")
-        console.log(questions[i-2].rightAnswer)
-        console.log(clicked)
+    
+console.log(i)
 
+      if(i>7){
+        alert("Finished!");
+       $('#myModal').modal(options)
+      }
         if (clicked!==null && clicked!==questions[i-2].rightAnswer){
          
           sec=sec-5
@@ -122,7 +128,7 @@ function counting() {
          
            },100)
       } else if (sec<1) {
-       alert("You're out of time!");
+       alert("Finished!");
        $('#myModal').modal(options)
       
       }
@@ -156,7 +162,7 @@ qopt4.addEventListener("click", setLocalStorage4)
 
 function displayQuestions() {
 
-if(i<6){
+if(i<8){
 
         var opt= questions[i].answer
         let quest= questions[i].q
