@@ -88,6 +88,8 @@ let questions= [
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
+let x=0
+window.localStorage.setItem("correct answer", x)
 var i=2
 function counting() {
     var sec = 31;
@@ -111,6 +113,7 @@ function counting() {
           window.localStorage.clear()
         }else if (clicked==questions[i-2].rightAnswer){
           sec=sec
+          
         }
           },100)
           
