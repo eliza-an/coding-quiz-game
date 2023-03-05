@@ -3,6 +3,7 @@ let qs= document.getElementById('question')
 let score=document.getElementById('answer')
 
 
+
 let questions= [
   { q: "blank",
   answer: {
@@ -249,6 +250,5 @@ let saveBttn=document.getElementById("saveBttn")
 saveBttn.addEventListener("click", set )
 
   
-
 
 
