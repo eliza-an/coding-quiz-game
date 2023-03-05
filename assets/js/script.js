@@ -1,5 +1,6 @@
 let options= document.getElementById('options')
 let qs= document.getElementById('question')
+let score=document.getElementById('answer')
 
 
 let questions= [
@@ -85,11 +86,12 @@ let questions= [
     } ,
 ]
 
+
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
+
 let x=0
-window.localStorage.setItem("correct answer", x)
 var i=2
 function counting() {
     var sec = 31;
@@ -110,13 +112,15 @@ function counting() {
          
           sec=sec-5
           
-          window.localStorage.clear()
-        }else if (clicked==questions[i-2].rightAnswer){
+          window.localStorage.removeItem("b")}
+        else if (clicked==questions[i-2].rightAnswer){
           sec=sec
-          
+       
+        localStorage.setItem("correct answer", x+1)
+
         }
-          },100)
-          
+         
+           },100)
       } else if (sec<1) {
        alert("You're out of time!");
        $('#myModal').modal(options)
@@ -195,8 +199,9 @@ function setLocalStorage4(){
 }
 
 
+localStorage.setItem("correct answer", x)
 
-  
+score.append(window.localStorage.getItem("correct answer"))
 
   
 
