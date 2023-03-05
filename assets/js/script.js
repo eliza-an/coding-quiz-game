@@ -131,14 +131,14 @@ console.log(i)
           window.localStorage.removeItem("b")}
         else if (clicked==questions[i-2].rightAnswer){
           sec=sec
-       
-        localStorage.setItem("correct answer", x+1)
+          
 
         }
          
            },100)
       } else if (sec<1) {
        alert("Finished!");
+       score.append(window.localStorage.getItem("correct answer"))
        $('#myModal').modal(options)
       
       }
@@ -200,24 +200,42 @@ displayQuestions()
 
 function setLocalStorage1(){
   window.localStorage.setItem("b", "a")
+
+  if ('a'==questions[i-2].rightAnswer){
+  correct_answers = Number(localStorage.getItem("correct answer"))
+  localStorage.setItem("correct answer", correct_answers+1)}
 }
 
 function setLocalStorage2(){
   window.localStorage.setItem("b", "b")
+  if ('b'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)}
 }
 
 function setLocalStorage3(){
   window.localStorage.setItem("b", "c")
+
+  if ('c'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)}
 }
 
 function setLocalStorage4(){
   window.localStorage.setItem("b", "d")
+  if ('d'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)}
 }
 
 
 localStorage.setItem("correct answer", x)
+let previous= window.localStorage.getItem("correct answer")
 
-score.append(window.localStorage.getItem("correct answer"))
+
+let username= document.getElementById("username")
+let saveBtn=document.getElementById("saveBtn")
+saveBtn.addEventListener("click", localStorage.setItem(username, previous ))
 
   
 
