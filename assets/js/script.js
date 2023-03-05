@@ -1,8 +1,29 @@
 let options= document.getElementById('options')
 let qs= document.getElementById('question')
+let score=document.getElementById('answer')
 
 
 let questions= [
+  { q: "blank",
+  answer: {
+      a: `blank`,
+      b: `blank`,
+      c: `blank`,
+      d: `blank`,
+  }, 
+
+  rightAnswer: `a`
+  } ,
+  { q: "blank",
+  answer: {
+      a: `blank`,
+      b: `blank`,
+      c: `blank`,
+      d: `blank`,
+  }, 
+
+  rightAnswer: `a`
+  } ,
  { q: "Which symbol is commonly associated with JQueery?",
     answer: {
         a: `&`,
@@ -53,22 +74,78 @@ let questions= [
 
     rightAnswer: `a`
     } ,
-    { q: "blank",
+    { q: "What type of popup box is NOT available in Javascript?",
     answer: {
-        a: `blank`,
-        b: `blank`,
-        c: `blank`,
-        d: `blank`,
+        a: `Prompt`,
+        b: `Confirm`,
+        c: `Question`,
+        d: `Alert`,
     }, 
 
-    rightAnswer: `a`
+    rightAnswer: `c`
+    } ,
+    { q: "You Have FINISHED!!",
+    answer: {
+        a: `Thank`,
+        b: `You`,
+        c: `for`,
+        d: `Playing!`,
+    }, 
+
+    rightAnswer: `c`
     } ,
 ]
+
+
+
 
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
 
-var i=0
+
+let x=0
+var i=2
+function counting() {
+    var sec = 31;
+    function count() {
+     
+      var counter = document.getElementById("countdown");
+      sec--;
+      counter.innerHTML =
+        "0:" + (sec < 10 ? "0" : "") + String(sec);
+      if (sec > 0) {
+        setTimeout(count, 1000);
+        setInterval(function(){
+        let clicked= localStorage.getItem("b")
+    
+console.log(i)
+
+      if(i>8){
+        sec=0
+      
+      }
+        if (clicked!==null && clicked!==questions[i-2].rightAnswer){
+         
+          sec=sec-5
+          
+          window.localStorage.removeItem("b")}
+        else if (clicked==questions[i-2].rightAnswer){
+          sec=sec
+       
+        localStorage.setItem("correct answer", x+1)
+
+        }
+         
+           },100)
+      } else if (sec<1) {
+       alert("Finished!");
+       $('#myModal').modal(options)
+      
+      }
+    }
+    count();
+  }
+  counting();
 
 
 var qtitle = document.createElement('p')
@@ -95,7 +172,7 @@ qopt4.addEventListener("click", setLocalStorage4)
 
 function displayQuestions() {
 
-if(i<6){
+if(i<9){
 
         var opt= questions[i].answer
         let quest= questions[i].q
@@ -117,10 +194,6 @@ if(i<6){
    
 displayQuestions()
 
-let one= 0
-let two=0
-let three=0
-let four=0
 
 
 
@@ -141,37 +214,10 @@ function setLocalStorage4(){
   window.localStorage.setItem("b", "d")
 }
 
-function counting() {
-    var sec = 31;
-    function count() {
-     
-      var counter = document.getElementById("countdown");
-      sec--;
-      counter.innerHTML =
-        "0:" + (sec < 10 ? "0" : "") + String(sec);
-      if (sec > 0) {
-        setTimeout(count, 1000);
-        setInterval(function(){
-        
-        if (window.localStorage.getItem("b")!==null && window.localStorage.getItem("b")!==questions[i-1].rightAnswer){
-         
-          sec=sec-5
-          
-          window.localStorage.clear()
-        }
-          },100)
-      } else if (sec<1) {
-       alert("You're out of time!");
-       $('#myModal').modal(options)
-      
-      }
-    }
-    count();
-  }
-  counting();
 
+localStorage.setItem("correct answer", x)
 
-  
+score.append(window.localStorage.getItem("correct answer"))
 
   
 
