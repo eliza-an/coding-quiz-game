@@ -230,12 +230,23 @@ function setLocalStorage4(){
 
 
 localStorage.setItem("correct answer", x)
-let previous= window.localStorage.getItem("correct answer")
 
 
-let username= document.getElementById("username")
-let saveBtn=document.getElementById("saveBtn")
-saveBtn.addEventListener("click", localStorage.setItem(username, previous ))
+
+
+
+
+
+function set (){
+ 
+  let previous= window.localStorage.getItem("correct answer")
+let username= document.getElementById("username").value
+
+ window.localStorage.setItem(username, previous)
+}
+
+let saveBttn=document.getElementById("saveBttn")
+saveBttn.addEventListener("click", set )
 
   
 
