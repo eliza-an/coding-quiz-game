@@ -196,7 +196,7 @@ if(i<9){
 displayQuestions()
 
 
-
+let right =document.getElementById("right")
 
 
 function setLocalStorage1(){
@@ -204,14 +204,18 @@ function setLocalStorage1(){
 
   if ('a'==questions[i-2].rightAnswer){
   correct_answers = Number(localStorage.getItem("correct answer"))
-  localStorage.setItem("correct answer", correct_answers+1)}
+  localStorage.setItem("correct answer", correct_answers+1)
+right.textContent="Correct"}
+else right.textContent="Wrong"
 }
 
 function setLocalStorage2(){
   window.localStorage.setItem("b", "b")
   if ('b'==questions[i-2].rightAnswer){
     correct_answers = Number(localStorage.getItem("correct answer"))
-    localStorage.setItem("correct answer", correct_answers+1)}
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 function setLocalStorage3(){
@@ -219,14 +223,18 @@ function setLocalStorage3(){
 
   if ('c'==questions[i-2].rightAnswer){
     correct_answers = Number(localStorage.getItem("correct answer"))
-    localStorage.setItem("correct answer", correct_answers+1)}
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 function setLocalStorage4(){
   window.localStorage.setItem("b", "d")
   if ('d'==questions[i-2].rightAnswer){
     correct_answers = Number(localStorage.getItem("correct answer"))
-    localStorage.setItem("correct answer", correct_answers+1)}
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 
