@@ -102,6 +102,11 @@ let questions= [
 
 //btn.addEventListener("click", displayQuestions);
 //btn.addEventListener("click", 
+function removing(){
+  window.localStorage.removeItem("debug")
+window.localStorage.removeItem("correct answer")
+window.localStorage.removeItem("b")
+}
 
 
 let x=0
@@ -141,7 +146,7 @@ console.log(i)
        alert("Finished!");
        score.append(window.localStorage.getItem("correct answer"))
        $('#myModal').modal(options)
-      
+      removing()
       }
     }
     count();
