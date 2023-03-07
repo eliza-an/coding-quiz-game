@@ -10,6 +10,8 @@
 ![image](https://user-images.githubusercontent.com/118762745/223554605-fae56773-1f9d-46d1-9d6e-41fe9901c38b.png)
 
 
+
+Link to the game= https://eliza-an.github.io/coding-quiz-game/ 
   ## Table of Contents
 
   * [Description](#Description)
