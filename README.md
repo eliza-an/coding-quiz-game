@@ -7,8 +7,7 @@
 
 ![image](https://user-images.githubusercontent.com/118762745/223554148-e5f4f6b6-b4e3-4ad3-b9d6-282668c7d579.png)
 ![image](https://user-images.githubusercontent.com/118762745/223554204-25280810-794c-4fd0-ac3f-913ba266e946.png)
-![image](https://user-images.githubusercontent.com/118762745/223554605-fae56773-1f9d-46d1-9d6e-41fe9901c38b.png)
-
+![image](https://user-images.githubusercontent.com/118762745/223557561-2cd0ae38-4127-4dac-902e-c69609156292.png)
 
 
 Link to the game= https://eliza-an.github.io/coding-quiz-game/ 
