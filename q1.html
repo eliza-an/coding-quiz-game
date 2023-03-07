@@ -17,6 +17,7 @@
       <div id="quiz" class ="wrapper">
       <div id="question"> </div>
       <div id="options"></div>
+      <div id="right"></div>
 
       <!-- Modal for results-->
 
@@ -34,12 +35,12 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Your Name: </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" id="username" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Play Again</button>
+              <a href="./index.html"><button type="button" class="btn btn-secondary" >Close</button></a>
+              <button type="button" class="btn btn-primary" id="saveBttn">Save changes</button>
             </div>
           </div>
         </div>

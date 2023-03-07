@@ -3,6 +3,7 @@ let qs= document.getElementById('question')
 let score=document.getElementById('answer')
 
 
+
 let questions= [
   { q: "blank",
   answer: {
@@ -131,14 +132,14 @@ console.log(i)
           window.localStorage.removeItem("b")}
         else if (clicked==questions[i-2].rightAnswer){
           sec=sec
-       
-        localStorage.setItem("correct answer", x+1)
+          
 
         }
          
            },100)
       } else if (sec<1) {
        alert("Finished!");
+       score.append(window.localStorage.getItem("correct answer"))
        $('#myModal').modal(options)
       
       }
@@ -195,31 +196,67 @@ if(i<9){
 displayQuestions()
 
 
-
+let right =document.getElementById("right")
 
 
 function setLocalStorage1(){
   window.localStorage.setItem("b", "a")
+
+  if ('a'==questions[i-2].rightAnswer){
+  correct_answers = Number(localStorage.getItem("correct answer"))
+  localStorage.setItem("correct answer", correct_answers+1)
+right.textContent="Correct"}
+else right.textContent="Wrong"
 }
 
 function setLocalStorage2(){
   window.localStorage.setItem("b", "b")
+  if ('b'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 function setLocalStorage3(){
   window.localStorage.setItem("b", "c")
+
+  if ('c'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 function setLocalStorage4(){
   window.localStorage.setItem("b", "d")
+  if ('d'==questions[i-2].rightAnswer){
+    correct_answers = Number(localStorage.getItem("correct answer"))
+    localStorage.setItem("correct answer", correct_answers+1)
+    right.textContent="Correct"}
+    else right.textContent="Wrong"
 }
 
 
 localStorage.setItem("correct answer", x)
 
-score.append(window.localStorage.getItem("correct answer"))
+
+
+
+
+
+
+function set (){
+ 
+  let previous= window.localStorage.getItem("correct answer")
+let username= document.getElementById("username").value
+
+ window.localStorage.setItem(username, previous)
+}
+
+let saveBttn=document.getElementById("saveBttn")
+saveBttn.addEventListener("click", set )
 
   
-
 
 
