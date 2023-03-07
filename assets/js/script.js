@@ -104,7 +104,7 @@ let questions= [
 //btn.addEventListener("click", 
 function removing(){
   window.localStorage.removeItem("debug")
-window.localStorage.removeItem("correct answer")
+
 window.localStorage.removeItem("b")
 }
 
